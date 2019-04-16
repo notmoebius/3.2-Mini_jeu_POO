@@ -29,6 +29,7 @@ class Game
     puts "s - Se soigner"
     puts "\n\nAttaquer un joueur en vu:"
     ennemies.each_with_index { |ennemi, i| puts "#{i} -" + ennemi.show_state }
+    print ">"
   end
 
   def menu_choice(choice)

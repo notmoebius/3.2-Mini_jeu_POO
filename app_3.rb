@@ -11,17 +11,14 @@ puts "---------------------------------------------------\n\n"
 
 puts "Quel est ton pseudo ? "
 print ">"
-name = gets.chomp
 
-my_game = Game.new(name)
+my_game = Game.new(gets.chomp)
 
 while my_game.is_still_ongoing? do
   my_game.show_players
   my_game.menu
-  print ">"
-  choice = gets.chomp
   puts "************************************************************************"
-  my_game.menu_choice(choice)
+  my_game.menu_choice(gets.chomp)
   break if my_game.ennemies.empty?
   my_game.enemies_attack
 end
